@@ -19,6 +19,11 @@ The features the plugin provides should be listed here.
 
 Minium version is 4.0.5 of netbox. Otherwise no changelog diff's will show up
 
+## Screenshot
+
+![gif1](docs/netbox changelog deepdiff plugin.gif "a title")
+
+
 ## Installing
 
 For adding to a NetBox Docker setup see
