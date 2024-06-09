@@ -1,0 +1,83 @@
+{% load helpers %}
+{% load i18n %}
+
+<script type="text/javascript">
+  var styles = `
+span.left_diff_change {
+  background-color:  #cc8500;
+  display: block;
+
+}
+span.left_diff_add {
+  display: block;
+}
+span.left_diff_del {
+  background-color: #d63939;
+  display: block;
+
+}
+span.lineno_q {
+  display: block;
+
+}
+span.right_diff_change {
+  background-color:  #cc8500;
+  display: block;
+
+}
+span.right_diff_add {
+  background-color: #2fb344;
+  display: block;
+}
+span.right_diff_del {
+  background-color: #d63939;
+  display: block;
+}
+td.code {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+`
+function insertCss( code ) {
+    var style = document.createElement('style');
+    style.type = 'text/css';
+
+    if (style.styleSheet) {
+        // IE
+        style.styleSheet.cssText = code;
+    } else {
+        // Other browsers
+        style.innerHTML = code;
+    }
+
+    document.getElementsByTagName("head")[0].appendChild( style );
+}
+insertCss(styles)
+</script>
+
+<div class="row mb-3">
+  <div class="col col-md-6">
+      <div class="card">
+          <h5 class="card-header">
+              {% trans "Pre-Change Data" %}
+          </h5>
+          <div class="card-body">
+              <pre class="change-data" style="padding-top: 0; padding-bottom: 0;">
+                  {{ leftrightdiffhtml.left |safe }}
+              </pre>
+          </div>
+      </div>
+  </div>
+  <div class="col col-md-6">
+      <div class="card">
+          <h5 class="card-header" >
+              {% trans "Post-Change Data" %}
+          </h5>
+          <div class="card-body">
+              <pre class="change-data" style="padding-top: 0; padding-bottom: 0;">
+                  {{ leftrightdiffhtml.right |safe }}
+              </pre>
+          </div>
+      </div>
+  </div>
+</div>
