@@ -15,7 +15,7 @@ class ChangeLogDiffConfig(PluginConfig):
     version = "version"
     base_url = "netbox_changelog_diff_plugin"
     default_settings = {
-        'change_log_format': 'yaml',
+        "change_log_format": "yaml",
     }
 
 
