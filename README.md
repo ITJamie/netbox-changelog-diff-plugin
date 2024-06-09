@@ -21,7 +21,7 @@ Minium version is 4.0.5 of netbox. Otherwise no changelog diff's will show up
 
 ## Screenshot
 
-![gif1](docs/netbox changelog deepdiff plugin.gif "a title")
+![gif1](docs/netbox%20changelog%20deepdiff%20plugin.gif)
 
 
 ## Installing
