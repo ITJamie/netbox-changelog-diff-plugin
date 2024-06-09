@@ -46,11 +46,11 @@ Enable the plugin in `/opt/netbox/netbox/netbox/configuration.py`,
 
 ```python
 PLUGINS = [
-    'netbox-changelog-diff-plugin'
+    'netbox_changelog_diff_plugin'
 ]
 
 PLUGINS_CONFIG = {
-    "netbox-changelog-diff-plugin": {},
+    "netbox_changelog_diff_plugin": {},
 }
 ```
 
