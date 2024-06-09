@@ -4,7 +4,7 @@ NetBox plugin for more detailed changlog diffs
 
 
 * Free software: Apache-2.0
-* Documentation: https://ITJamie.github.io/netbox-changelog-diff-plugin/
+* Documentation: https://github.com/ITJamie/netbox-changelog-diff-plugin
 
 
 ## Features
