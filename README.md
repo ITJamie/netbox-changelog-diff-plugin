@@ -15,6 +15,7 @@ The features the plugin provides should be listed here.
 
 | NetBox Version   | Plugin Version |
 |------------------|----------------|
+|     4.1.x        |      0.2.0     |
 |     4.0.5        |      0.1.0     |
 
 Minium version is 4.0.5 of netbox. Otherwise no changelog diff's will show up
