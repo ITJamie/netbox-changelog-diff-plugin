@@ -3,7 +3,7 @@ from .utilities.html_differ import styled_diff
 
 
 class ChangeLogDiffTemplateExtension(PluginTemplateExtension):
-    model = "extras.objectchange"
+    models = ["core.objectchange"]
 
     def full_width_page(self):
         prechange_data = self.context["object"].prechange_data
