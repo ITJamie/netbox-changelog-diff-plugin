@@ -2,7 +2,7 @@
 
 __author__ = """Jamie Murphy"""
 __email__ = "git@jam.ie"
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 
 from netbox.plugins import PluginConfig
@@ -16,6 +16,7 @@ class ChangeLogDiffConfig(PluginConfig):
     base_url = "netbox_changelog_diff_plugin"
     default_settings = {
         "change_log_format": "yaml",
+        "hide_native_diff": False,
     }
 
 

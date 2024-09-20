@@ -30,10 +30,10 @@ Minium version is 4.0.5 of netbox. Otherwise no changelog diff's will show up
 For adding to a NetBox Docker setup see
 [the general instructions for using netbox-docker with plugins](https://github.com/netbox-community/netbox-docker/wiki/Using-Netbox-Plugins).
 
-While this is still in development and not yet on pypi you can install with pip:
+to install from pip:
 
 ```bash
-pip install git+https://github.com/ITJamie/netbox-changelog-diff-plugin
+pip install netbox-changelog-diff-plugin
 ```
 
 or by adding to your `local_requirements.txt` or `plugin_requirements.txt` (netbox-docker):
@@ -51,7 +51,12 @@ PLUGINS = [
 ]
 
 PLUGINS_CONFIG = {
-    "netbox_changelog_diff_plugin": {},
+    "netbox_changelog_diff_plugin": {
+        # can be json or yaml, yaml is more readable
+        "change_log_format": "yaml", 
+        # will hide the native changelog diff's if `True` and only show new ones
+        "hide_native_diff": False
+    },
 }
 ```
 

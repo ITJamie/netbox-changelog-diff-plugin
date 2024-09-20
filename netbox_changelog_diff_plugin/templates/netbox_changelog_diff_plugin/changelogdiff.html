@@ -1,6 +1,22 @@
 {% load helpers %}
 {% load i18n %}
 
+{% if hide_native_diff %}
+<script type="text/javascript">
+  window.onload = function() {
+    var headers = document.querySelectorAll('h2.card-header');
+    headers.forEach(function(header) {
+      if (header.textContent.trim() === 'Pre-Change Data' || header.textContent.trim() === 'Post-Change Data') {
+        var parentDiv = header.closest('div.card');
+        if (parentDiv) {
+          parentDiv.style.display = 'none';
+        }
+      }
+    });
+  };
+</script>
+{% endif %}
+
 <script type="text/javascript">
   var styles = `
 span.left_diff_change {
@@ -59,7 +75,7 @@ insertCss(styles)
   <div class="col col-md-6">
       <div class="card">
           <h5 class="card-header">
-              {% trans "Pre-Change Data" %}
+              {% trans "Pre-Change Data (Changelog Diff Plugin)" %}
           </h5>
           <div class="card-body">
               <pre class="change-data" style="padding-top: 0; padding-bottom: 0;">
@@ -71,7 +87,7 @@ insertCss(styles)
   <div class="col col-md-6">
       <div class="card">
           <h5 class="card-header" >
-              {% trans "Post-Change Data" %}
+              {% trans "Post-Change Data (Changelog Diff Plugin)" %}
           </h5>
           <div class="card-body">
               <pre class="change-data" style="padding-top: 0; padding-bottom: 0;">
