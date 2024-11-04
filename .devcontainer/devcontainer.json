@@ -19,9 +19,9 @@
                 "ms-python.flake8",
                 "ms-python.black-formatter",
                 "ms-vsliveshare.vsliveshare",
-                "ryanluker.vscode-coverage-gutters",
-                "bungcip.better-toml",
-                "GitHub.copilot"
+                "ryanluker.vscode-coverage-gutters"
+                // "bungcip.better-toml"
+                // "GitHub.copilot"
             ],
             "settings": {
                 "python.defaultInterpreterPath": "/usr/local/bin/python",
@@ -40,5 +40,13 @@
             }
         }
     },
-    "onCreateCommand": "pre-commit install-hooks"
+    "features": {
+        "ghcr.io/itsmechlark/features/postgresql:1": {
+            "version": "16"
+        },
+        "ghcr.io/itsmechlark/features/redis-server:1": {
+            "version": "latest"
+        }
+    }
 }
+
